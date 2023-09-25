@@ -39,11 +39,6 @@ export class HomepageComponent implements AfterViewInit {
           datasets: [
             {
               data: res.myBudget.map((item: any) => item.budget),
-              backgroundColor: [
-              '#ffcd56',
-              '#ff6384',
-              '#36a2eb',
-              '#fd6b19'],
             },
           ],
           labels: res.myBudget.map((item: any) => item.title),
