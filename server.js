@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port=3000;
-
+const data= require('./quiz4.json');
 //app.use('/',express.static('public'));
 app.use(cors());
 const budget = {
@@ -22,9 +22,8 @@ const budget = {
 ]};
 
  app.use('/budget',(req,res) => {
-   res.sendFile('C:\\dev\\personal-budget1\\quiz4.json');
+   res.json(data);
  });
-
 // app.get('/budget', (req, res) => {
 //     res.json(budget);
 // });
